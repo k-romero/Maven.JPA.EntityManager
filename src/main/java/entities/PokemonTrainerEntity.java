@@ -4,6 +4,8 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "pokemon_trainer")
@@ -153,4 +155,5 @@ public class PokemonTrainerEntity {
                 ", pokemon_id=" + pokemon_id +
                 '}';
     }
+
 }
