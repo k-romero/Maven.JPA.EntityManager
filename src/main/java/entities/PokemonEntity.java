@@ -1,18 +1,23 @@
 package entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "pokemons")
 public class PokemonEntity {
 
     @Id
-    private Long id;
-    private String name;
+    private String name;    private Long id;
+
     private int primary_type;
     private int secondary_type;
+
+    @OneToMany
+    @JoinColumn(name = "trainerid")
+    @OrderBy
+    private List<PokemonTrainerEntity> trainers = new ArrayList<>();
 
     public PokemonEntity() {
     }
@@ -47,5 +52,13 @@ public class PokemonEntity {
 
     public void setSecondary_type(int secondary_type) {
         this.secondary_type = secondary_type;
+    }
+
+    public List<PokemonTrainerEntity> getTrainers() {
+        return trainers;
+    }
+
+    public void setTrainers(List<PokemonTrainerEntity> trainers) {
+        this.trainers = trainers;
     }
 }

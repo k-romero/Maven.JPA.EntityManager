@@ -19,8 +19,6 @@ public class PokemonTrainerEntity {
     private Integer spatk;
     private Integer spdef;
     private Integer speed;
-
-    @JoinColumn(name = "id")
     private Integer pokemon_id;
 
 
