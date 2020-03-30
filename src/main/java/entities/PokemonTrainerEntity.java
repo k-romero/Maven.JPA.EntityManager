@@ -4,8 +4,6 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "pokemon_trainer")
@@ -21,6 +19,8 @@ public class PokemonTrainerEntity {
     private Integer spatk;
     private Integer spdef;
     private Integer speed;
+
+    @JoinColumn(name = "id")
     private Integer pokemon_id;
 
 

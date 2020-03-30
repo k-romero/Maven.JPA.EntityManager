@@ -8,7 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.ArrayList;
-import java.util.stream.Collectors;
+
 
 public class PokemonTrainerService {
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-Entity-Lab");
